@@ -7,11 +7,18 @@ let timestamp = dt.getTime();
 let datetime = dt.toDateString();
 let librarymatrix = {};
 
-let algorithms = books.reduce( (acc,book,j) => {
+let algorithms = books.filter(book => book.algorithmid!=="algorithm-1637362729").reduce( (acc,book,j) => {
 	if(!acc.hasOwnProperty(book.algorithmid)) { acc[book.algorithmid] = [ book ] } 
 	else { acc[book.algorithmid].push(book) }
 	return acc;
 }, {});
+Object.entries(algorithms).forEach( a => {
+	a[1].sort( (a,b) => {
+		let astr = a.dimensions.name + a.pigments.sort().join(","); 
+		let bstr = b.dimensions.name + b.pigments.sort().join(","); 
+		return astr<bstr;
+	});
+});
 librarymatrix["algorithms"] = algorithms;
 
 let seeds = books.reduce( (acc,book,j) => {
