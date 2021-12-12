@@ -16,7 +16,7 @@
 			"@type": "WebPage",
 			"name": "book: <%- p.id %>",
 			"breadcrumb": "book factory > book: <%- p.id %>",
-          	"url": "https://www.bookfactory.work/<%- p.directory %>/index.html",
+          	"url": "https://www.bookfactory.work<%- p.directory %>/index.html",
 			"description": "book factory > book: <%- p.id %>: generative output from the book factory",
 			"datePublished": "<%- p.datetimeISOstr %>",
           	"image": "https://www.bookfactory.work/apple-touch-icon.png",
@@ -115,8 +115,8 @@
 		<h1>other links</h1>
 	</header>
 	<ul class="expand">
-		<li><a href="book.pdf">complete pdf book (whole series of images)</a></li>
-		<li><a href="https://storage.googleapis.com/bookfactory/<%- p.directory %>/book.zip">zip file with all resources</a></li>
+		<li><a href="https://storage.googleapis.com/bookfactory<%- p.directory %>/book.pdf">complete pdf book (whole series of images)</a></li>
+		<li><a href="https://storage.googleapis.com/bookfactory<%- p.directory %>/book.zip">zip file with all resources</a></li>
 	</ul>
 </article>
 
