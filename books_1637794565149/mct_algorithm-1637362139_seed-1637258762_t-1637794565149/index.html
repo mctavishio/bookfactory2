@@ -278,7 +278,7 @@
 			figureEl.appendChild(imageEl);
 			divEl.appendChild(figureEl);
 			cardsEl.appendChild(divEl);
-			let largesrc = "page" + (j+1).toString().padStart(3, "0")+".png";
+			let largesrc = "https://storage.googleapis.com/bookfactory/books_1637794565149/mct_algorithm-1637362139_seed-1637258762_t-1637794565149/page" + (j+1).toString().padStart(3, "0")+".png";
 			imageEl.addEventListener("click", e => {window.open(largesrc)});
 		});
 		let pdfframesEl = document.querySelector("#pdfframes");

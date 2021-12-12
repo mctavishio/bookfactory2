@@ -184,7 +184,7 @@
 			figureEl.appendChild(imageEl);
 			divEl.appendChild(figureEl);
 			cardsEl.appendChild(divEl);
-			let largesrc = "page" + (j+1).toString().padStart(3, "0")+".png";
+			let largesrc = "https://storage.googleapis.com/bookfactory<%- p.directory %>/page" + (j+1).toString().padStart(3, "0")+".png";
 			imageEl.addEventListener("click", e => {window.open(largesrc)});
 		});
 		let pdfframesEl = document.querySelector("#pdfframes");

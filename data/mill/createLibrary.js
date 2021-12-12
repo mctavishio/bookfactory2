@@ -63,31 +63,26 @@ fs.writeFileSync(librarymatrixfile, "librarymatrix = " + JSON.stringify(librarym
   }
 });
 
-// books.forEach( (book, j, bookarr) => {
-// 	ejs.renderFile("book.ejs", {p:book}, (err, result) => {
-// 	    if (err) {
-// 	        console.log('info', 'error encountered: ' + err);
-// 	        // throw err;
-// 	    }
-// 	    else {
-// 	        try {
-// 	        	 console.log("../../"+ (book.directory).substring(1)+"/index.html");
-// 	            fs.writeFileSync("../../"+(book.directory).substring(1)+"/index.html", result, 'utf8');
-// 	            // fs.writeFileSync("./index_"+book.id+".html", result, 'utf8');
-// 	        } catch(err) {
-// 	            if (err) {
-// 	                throw err;
-// 	            }
-// 	        }
-// 	    }
-// 	});
-// });
+books.forEach( (book, j, bookarr) => {
+ 	ejs.renderFile("book.ejs", {p:book}, (err, result) => {
+ 	    if (err) {
+ 	        console.log('info', 'error encountered: ' + err);
+ 	        // throw err;
+ 	    }
+ 	    else {
+ 	        try {
+ 	        	 console.log("../../"+ (book.directory).substring(1)+"/index.html");
+ 	            fs.writeFileSync("../../"+(book.directory).substring(1)+"/index.html", result, 'utf8');
+ 	        } catch(err) {
+ 	            if (err) {
+ 	                throw err;
+ 	            }
+ 	        }
+ 	    }
+ 	});
+ });
 
 (()=>{
-// let catalogue = algorithms.entries().map( a => {
-// 	let bookssubset = books.filter( book => book.algorithm===a );
-// 	return { algorithm: a, printrun: bookssubset[0].printrun } 
-// });
 let p = {
 	datetime: datetime,
 	library: librarymatrix,
